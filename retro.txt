@@ -1,0 +1,26 @@
+# What was new
+- gitpod.io +1
+- first time with ML +1
+- leading a session for ML mob programming
+- Data structures (tree)
+- sklearn
+
+# What was learned
+- gitpod.io +1
+--      great alternative to notebooks or VScode live
+--      no need to set up new VMs
+- Even if I am unfamiliar I can still do some kind of skill
+- sklearn
+
+# What can be improved?
+- Unclear how testing works in ML +1
+--      what was the validated data vs dummy data?
+--      How do we connect the process and testing frameworks between validated data vs ML model outputs?
+---         Confirming that models can at least handle validated/confirmed outputs by entering confirmed 
+            outputs as inputs
+---         Building a simulator with underlying assumptions for testing
+- How would a larger grid affect combinations and give more data inputs for training?
+- Is there a different data structure we could use instead of list of lists?
+- How could we change the data structure if we were midway into a testing model?
+- More uniform experience level? How would this change things?
+- Nice to learn how to test third party dependencies

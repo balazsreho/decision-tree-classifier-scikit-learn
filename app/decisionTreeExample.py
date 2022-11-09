@@ -2,6 +2,63 @@
 
 from sklearn import tree
 from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+
+def prepare_training_data():
+    # create a list, the list will have all the possible combinations of alive, #of neighbors
+    # this is for one cell: [is_cell_alive_now, number_of_neighbours]
+    input_combos_list = [
+        [False, 0],
+        [False, 1],
+        [False, 2],
+        [False, 3],
+        [False, 4],
+        [False, 5],
+        [False, 6],
+        [False, 7],
+        [False, 8],
+        [True, 0],
+        [True, 1],
+        [True, 2],
+        [True, 3],
+        [True, 4],
+        [True, 5],
+        [True, 6],
+        [True, 7],
+        [True, 8]
+    ]
+    # 
+    expected_outputs = [
+    # Dead Cells
+        False,
+        False,
+        False,
+        True,
+        False,
+        False,
+        False,
+        False,
+        False,
+    # Live Cells
+        False,
+        False,
+        True,
+        True,
+        False,
+        False,
+        False,
+        False,
+        False
+    ]
+    train_test_split(input_combos_list, expected_outputs, test_size=0.33, random_state=42)
+
+    return input_combos_list, expected_outputs
+
+
+def game_of_life():
+    trained_classifier = tree.DecisionTreeClassifier()
+    trained_classifier = trained_classifier.fit(prepare_training_data())
 
 
 def example1():
